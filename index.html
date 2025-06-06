@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Aluguel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Aluguel</h1>
+    
+    <div class="calculator">
+      <div class="form-group">
+        <label for="valorBase">Valor Base do Aluguel (R$):</label>
+        <input type="number" id="valorBase" step="0.01" min="0" placeholder="Ex: 1000.00">
+      </div>
+      
+      <div class="form-group">
+        <label for="porcentagem">Porcentagem de Ajuste (%):</label>
+        <input type="number" id="porcentagem" step="0.01" placeholder="Ex: 10">
+      </div>
+      
+      <div class="form-group">
+        <label for="taxaCondominio">Taxa de Condomínio (R$):</label>
+        <input type="number" id="taxaCondominio" step="0.01" min="0" placeholder="Ex: 300.00">
+      </div>
+      
+      <div class="form-group">
+        <label for="iptu">IPTU (R$):</label>
+        <input type="number" id="iptu" step="0.01" min="0" placeholder="Ex: 100.00">
+      </div>
+      
+      <button id="calcular">Calcular</button>
+      
+      <div id="resultado" class="hidden">
+        <h2>Resultado</h2>
+        <div class="result-item">
+          <span>Valor Base:</span>
+          <span id="resultValorBase">R$ 0,00</span>
+        </div>
+        <div class="result-item">
+          <span>Valor com Ajuste:</span>
+          <span id="resultValorComPorcentagem">R$ 0,00</span>
+        </div>
+        <div class="result-item">
+          <span>Taxa de Condomínio:</span>
+          <span id="resultTaxaCondominio">R$ 0,00</span>
+        </div>
+        <div class="result-item">
+          <span>IPTU:</span>
+          <span id="resultIptu">R$ 0,00</span>
+        </div>
+        <div class="result-item total">
+          <span>Valor Total:</span>
+          <span id="resultValorTotal">R$ 0,00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
